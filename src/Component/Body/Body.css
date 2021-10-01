@@ -2,3 +2,23 @@
   width: 100%;
   text-align: left;
 }
+
+.nothing {
+  padding: 2% 2%;
+  font-weight: 700;
+}
+
+.friendsInfoCardHolder {
+  max-height: 60vh;
+  overflow-y: scroll;
+}
+
+.friendsInfoCardHolder::-webkit-scrollbar {
+  width: 5px;
+  background-color: gray;
+}
+
+.friendsInfoCardHolder::-webkit-scrollbar-thumb {
+  background-color: lightgray;
+  border-radius: 15;
+}

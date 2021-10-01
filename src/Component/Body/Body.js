@@ -7,23 +7,7 @@ import NameAddTextBox from "../NameAddTextBox/NameAddTextBox";
 const Body = (props) => {
   const [updateState, setUpdateState] = useState(0);
   const [friendListFiltered, setFriendListFiltered] = useState([]);
-  const [friendsList, setFriendsList] = useState([
-    {
-      id: 1,
-      name: "Victor Deb",
-      isFavorite: true,
-    },
-    {
-      id: 2,
-      name: "Ananya Karmakar",
-      isFavorite: false,
-    },
-    {
-      id: 3,
-      name: "Ananya true",
-      isFavorite: true,
-    },
-  ]);
+  const [friendsList, setFriendsList] = useState([]);
 
   const handleToggleFavoriteClick = (id) => {
     let tempData = friendsList;
@@ -66,20 +50,26 @@ const Body = (props) => {
   return (
     <div className="bodyContainer">
       <NameAddTextBox enterFriendName={handleEnterFriendName} />
-      <div>
-        {friendListFiltered
-          .sort(function (a, b) {
-            if (props.sortBy === "id")
-              return a.id - b.id || a.name.localeCompare(b.name);
-            return b.isFavorite - a.isFavorite || a.name.localeCompare(b.name);
-          })
-          .map((data) => (
-            <FriendInfoCard
-              data={data}
-              toggleFavoriteClick={handleToggleFavoriteClick}
-              deleteClick={handleDeleteClick}
-            />
-          ))}
+      <div className="friendsInfoCardHolder">
+        {friendListFiltered.length != 0 ? (
+          friendListFiltered
+            .sort(function (a, b) {
+              if (props.sortBy === "id")
+                return a.id - b.id || a.name.localeCompare(b.name);
+              return (
+                b.isFavorite - a.isFavorite || a.name.localeCompare(b.name)
+              );
+            })
+            .map((data) => (
+              <FriendInfoCard
+                data={data}
+                toggleFavoriteClick={handleToggleFavoriteClick}
+                deleteClick={handleDeleteClick}
+              />
+            ))
+        ) : (
+          <div className="nothing">Nothing to show</div>
+        )}
       </div>
     </div>
   );

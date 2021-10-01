@@ -32,15 +32,4 @@
 .friendListContainer {
   width: 40vw;
   border: 1px solid gray;
-  max-height: 60vh;
-  overflow-y: scroll;
-}
-
-.friendListContainer::-webkit-scrollbar {
-  width: 5px;
-}
-
-.friendListContainer::-webkit-scrollbar-thumb {
-  background-color: gray;
-  border-radius: 15;
 }
