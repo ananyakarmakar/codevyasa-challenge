@@ -1,0 +1,13 @@
+.nameAddTextBoxContainer {
+  width: 100%;
+}
+
+.inputBox {
+  width: 90%;
+  padding: 2% 2%;
+  border: none;
+}
+
+.inputBox:focus {
+  outline: none;
+}

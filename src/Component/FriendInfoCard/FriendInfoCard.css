@@ -1,0 +1,27 @@
+.FriendInfoCardContainer {
+  padding: 3% 3%;
+  display: flex;
+  border-top: 1px solid gray;
+}
+
+.left {
+  width: 70%;
+}
+
+.friendName {
+  font-weight: 700;
+}
+
+.subText {
+  font-size: 13px;
+}
+
+.icon {
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.right {
+  width: 30%;
+  text-align: right;
+}

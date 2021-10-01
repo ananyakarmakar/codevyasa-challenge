@@ -1,0 +1,46 @@
+.extraControllsContainer {
+  display: flex;
+  width: 40vw;
+  padding: 1% 1%;
+}
+
+.searchContainer {
+  width: 80%;
+  text-align: left;
+}
+
+.friendSearchInputBox {
+  border: none;
+  border-bottom: 1px solid gray;
+  padding: 1% 2%;
+}
+
+.friendSearchInputBox:focus {
+  outline: none;
+}
+
+.sortByButtonContainer {
+  width: 20%;
+  text-align: right;
+}
+
+.sortByButton {
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.friendListContainer {
+  width: 40vw;
+  border: 1px solid gray;
+  max-height: 60vh;
+  overflow-y: scroll;
+}
+
+.friendListContainer::-webkit-scrollbar {
+  width: 5px;
+}
+
+.friendListContainer::-webkit-scrollbar-thumb {
+  background-color: gray;
+  border-radius: 15;
+}
